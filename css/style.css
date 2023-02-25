@@ -1,0 +1,393 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+/* ---------------------------- */
+
+
+
+/* Base settings */
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body{
+  background-color: #26262a;
+}
+
+.wrapper{
+  height: 100vh;
+  height: 100svh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 10px;
+}
+/* ---------------------------- */
+
+
+
+
+/* hiding scrollbar */
+* {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+}
+
+*::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+/* ---------------------------- */
+
+
+
+
+
+
+/* Intro */
+.intro{
+  height: 85vh;
+  height: 85svh;
+  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  transform-style: preserve-3d;
+  z-index: -1;
+}
+
+.intro_content{
+  position: absolute;
+  height: 100%;
+  transform: translateZ(-20px) scale(3);
+  background-color: #26262a;
+}
+
+.title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 3.5rem;
+  letter-spacing: 1px;
+  padding-top: 15vh;
+  padding-top: 15svh;
+  color: #c3073f;
+  line-height: 2rem;
+}
+
+.subtitle{
+  text-align: right;
+  font-size: 1.2rem;
+}
+
+.total_title{
+  padding-top: 15vh;
+  padding-top: 15svh;
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.total_time{
+  font-family: "Bebas Neue", sans-serif;
+  text-align: center;
+  font-size: 2rem;
+}
+/* ---------------------------- */
+
+
+
+/* Main */
+.main{
+  background-color: #1a1a1d;
+  font-size: 0.8rem;
+  padding-bottom: 10vh;
+}
+
+  /* date and hours read that year */
+.year{
+  background: rgb(195,7,63);
+  background: linear-gradient(145deg, rgba(195,7,63,1) 0%, rgba(111,34,50,1) 100%);
+  display: flex; 
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.text_year{
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
+  margin: auto 0;
+}
+
+.hours_year{
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.5rem;
+  margin: auto 0;
+}
+  /* ---------------------------- */
+
+
+  /* Books */
+.book_set{
+  padding: 1rem 1rem 5rem 1rem;
+}
+
+.book_wrapper{
+  display: flex; 
+  justify-content: space-between;
+}
+
+.book_settitle{
+  font-size: 1.2rem;
+  line-height: 0rem;
+  padding: 3rem 0rem 0rem 1rem;
+  color: #4e4e50;
+  font-weight: bold;
+}
+
+.book_title{
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.book_info{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.book_text_author:before{
+  content: "";
+  background-image:url(/pics/icons/pen.png);
+  background-size: 100% 100%;
+  display: inline-block;
+  height: 0.7rem;
+  width: 0.7rem;
+  margin-right: 0.2rem;
+}
+
+.book_text_voice:before{
+  content: "";
+  background-image:url(/pics/icons/microphone.png);
+  background-size: 100% 100%;
+  display: inline-block;
+  height: 0.7rem;
+  width: 0.7rem;
+  margin-right: 0.2rem;
+}
+
+.book_subtitle{
+  color: #c3073f;
+  font-family: "Bebas Neue", sans-serif;
+  margin-top: 1rem;
+  line-height: 0.7rem;
+  letter-spacing: 1px;
+  font-size: 1rem;
+}
+
+.book_status_completed{
+  color: #A3CFA7;
+  font-weight: bold;
+}
+
+.book_status_dropped{
+  color: #f3d096;
+  font-weight: bold;
+}
+
+.book_pic{
+  width: 40%;
+}
+
+.book_pic img{
+  width: 100%;
+  object-fit: scale-down;
+}
+  /* ---------------------------- */
+/* ---------------------------- */
+
+
+
+/* footer */
+
+.footer{
+  height: 5svh;
+  height: 5vh;
+  background: rgb(195,7,63);
+  background: linear-gradient(145deg, rgba(195,7,63,1) 0%, rgba(111,34,50,1) 100%);
+  text-align: center;
+  line-height: 5vh;
+}
+
+/* ---------------------------- */
+
+
+
+
+
+/* Tablet & Laptop */
+@media only screen and (min-width: 576px) {
+  
+  /* Main */
+  .year{
+    justify-content: space-around;
+  }
+
+  .book_series{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+
+  .book_series > div {
+    /*
+      1/3  - 3 columns per row
+      10px - spacing between columns 
+    */
+    width: calc(1/2*100% - (1 - 1/2)*2vw);
+    padding: 2vw;
+  }
+
+  .book_series > div:nth-child(2n) {
+    margin-right: 0;
+  }
+  
+  .book_series::after {
+    content: '';
+    flex: auto;
+  }
+  
+  /*
+    remove top margin from first row
+    -n+3 - 3 columns per row 
+  */
+  .book_series > div:nth-child(-n+2) {
+    margin-top: 0;
+  }
+
+  .book_settitle{
+    padding: 3rem 0rem 0rem 2vw;
+    font-size: 2.5vw;
+  }
+
+  .book_title{
+    font-size: 3.5vw;
+  }
+
+  .book_subtitle{
+    font-size: 2vw;
+  }
+
+  .main{
+    font-size: 2vw;
+  }
+
+  .book_text_author:before{
+    height: 2vw;
+    width: 2vw;
+    margin-right: 0.5vw;
+  }
+
+  .book_text_voice:before{
+    height: 2vw;
+    width: 2vw;
+    margin-right: 0.5vw;
+  }
+}
+/* ---------------------------- */
+
+
+
+
+/* Desktop */
+@media only screen and (min-width: 1200px) {
+
+  /* Intro */
+  .title{
+    font-size: 8rem;
+    line-height: 4rem;
+  }
+
+  .subtitle{
+    font-size: 2rem;
+  }
+
+  .total_title{
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+
+  .total_time{
+    font-size: 4rem;
+  }
+  /* ---------------------------- */
+
+
+  /* Main */
+  .main{
+    font-size: 1vw;
+  }
+
+  .text_year{
+    font-size: 4.5rem;
+  }
+  .hours_year{
+    font-size: 3.5rem;
+  }
+
+  .book_settitle{
+    font-size: 1.5vw;
+    padding: 5rem 0rem 0rem 3vw;
+  }
+
+  .book_title{
+    font-size: 2vw;
+  }
+
+  .book_subtitle{
+    font-size: 1vw;
+  }
+
+  .book_series > div {
+    /*
+      1/3  - 3 columns per row
+      10px - spacing between columns 
+    */
+    width: calc(1/3*100% - (1 - 1/3)*3vw);
+    padding: 3vw;
+    padding-top: 1vw;
+  }
+
+  .book_series > div:nth-child(3n) {
+    margin-right: 0;
+  }
+  
+  /*
+    remove top margin from first row
+    -n+3 - 3 columns per row 
+  */
+  .book_series > div:nth-child(-n+3) {
+    margin-top: 0;
+  }
+
+  .book_text_author:before{
+    height: 1vw;
+    width: 1vw;
+  }
+
+  .book_text_voice:before{
+    height: 1vw;
+    width: 1vw;
+  }
+
+  
+
+  /* ---------------------------- */
+
+}
+/* ---------------------------- */
