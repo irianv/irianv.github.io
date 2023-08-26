@@ -103,7 +103,6 @@ body{
 .main{
   background-color: #1a1a1d;
   font-size: 0.8rem;
-  padding-bottom: 10vh;
 }
 
   /* date and hours read that year */
@@ -162,7 +161,7 @@ body{
 
 .book_text_author:before{
   content: "";
-  background-image:url(/pics/icons/pen.png);
+  background-image:url('../pics/icons/pen.png');
   background-size: 100% 100%;
   display: inline-block;
   height: 0.7rem;
@@ -172,7 +171,7 @@ body{
 
 .book_text_voice:before{
   content: "";
-  background-image:url(/pics/icons/microphone.png);
+  background-image:url('../pics/icons/microphone.png');
   background-size: 100% 100%;
   display: inline-block;
   height: 0.7rem;
@@ -221,6 +220,7 @@ body{
   background: linear-gradient(145deg, rgba(195,7,63,1) 0%, rgba(111,34,50,1) 100%);
   text-align: center;
   line-height: 5vh;
+  margin-top: 10vh;
 }
 
 /* ---------------------------- */
