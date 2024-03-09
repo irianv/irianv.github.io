@@ -129,6 +129,10 @@ body{
 
 
   /* Books */
+.book_series{
+  padding-bottom: 3rem;
+}
+
 .book_set{
   padding: 1rem 1rem 5rem 1rem;
 }
